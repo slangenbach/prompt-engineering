@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "prompt-engineering"
+version = "0.1.0"
+description = "Interact with ChatGPT in an efficient way"
+authors = ["Stefan Langenbach <stefan@langenbach.online>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "prompt_engineering"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+openai = "^0.27.7"
+python-dotenv = "^1.0.0"
+ipykernel = "^6.23.1"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.0.270"
+black = "^23.3.0"
+nbqa = "^1.7.0"
+pre-commit = "^3.3.2"
+nbconvert = "^7.4.0"
+
+[tool.ruff]
+line-length = 100
+
+[tool.black]
+line-length = 100
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
